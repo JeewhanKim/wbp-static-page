@@ -1,8 +1,8 @@
 module.exports = {
   getMain() {
-    return $('#nyt-main')
-  },
-  getLanguageSelector() {
-    return $('#languer-selector')
+    return document.getElementById('wbp-main')
   }
+  // getLanguageSelector() {
+  //   return $('#languer-selector')
+  // }
 }
