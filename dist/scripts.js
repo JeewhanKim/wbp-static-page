@@ -110,5 +110,10 @@
 
       // All copy and image data can be fetched at http://homework.warbyparker.com.
       getJSON("http://homework.warbyparker.com/", renderFrontPage);
+
+      window.addEventListener('scroll', function () {
+        var scrollY = window.scrollY;
+        // console.log(window.scrollY)
+      });
     };
   }, { "./_data": 2, "./_dom.js": 3, "./_generate.js": 4 }] }, {}, [1]);

@@ -48,5 +48,11 @@ module.exports = _ => {
 
   // All copy and image data can be fetched at http://homework.warbyparker.com.
   getJSON(`http://homework.warbyparker.com/`, renderFrontPage)
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY
+    // console.log(window.scrollY)
+    
+  })
 }
 
