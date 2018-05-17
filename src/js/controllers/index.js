@@ -34,34 +34,21 @@ module.exports = _ => {
       console.log('invalid DOM Elements')
       return
     }
-    return
-  
+    
     /*
     * Step 1. Refine JSON file to get only A~C Column named contents
     */
     const refinedContents = require('./_data')(json)
   
     /*
-    * Step 2. Parse valid JSON data and store into the "refined" data object array.
+    * Step 2. Generate & Render DOM HTML from refined data.
     */
-    require('./_parser.js')(refinedContents, data)
-  
-    /*
-    * Step 3. Generate & Render DOM HTML from refined data.
-    */
-    const viewController = require('./_generate.js')
-    viewController(domElements.getMain(), data)
-  
-    /*
-    * Lanauge Option Click Events
-    */
-    domElements.getLanguageSelector().find('li').click(e => {
-      const option = $(e.currentTarget).attr('data-lang')
-      $(e.currentTarget).addClass('selected').siblings().removeClass('selected')
-      viewController(domElements.getMain(), data, option)
-    })
+    require('./_generate.js')(domElements.getMain(), data)
+
+    return
   }
 
+  // All copy and image data can be fetched at http://homework.warbyparker.com.
   getJSON(`http://homework.warbyparker.com/`, renderFrontPage)
 }
 
