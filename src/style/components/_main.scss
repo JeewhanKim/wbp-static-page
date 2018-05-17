@@ -1,4 +1,11 @@
 body {
-  // The page that the lightbox lives on should be 2000px tall. (Again, save some time and just make it 2000px of whitespace.)
   min-height: $min-height;
+  background-color: $body-color;
+}
+ul {
+  list-style: none;
+}
+h1, h2, h3, p, quote, figure, figcaption, label, ul {
+  margin: 0;
+  padding: 0;
 }

@@ -9,8 +9,6 @@ h1, h2, h3, h4, h5, p {
 
 @import './variables/variables.scss'; // variables to store information that we want to reuse
 @import './mixin/mixin.scss'; // mixin to make groups of css declarations
-// @import './components/header.scss'; // main component [header]
-// @import './components/grid.scss'; // main component [grid]
-// @import './components/responsive.scss'; // main component [responsive version handler]
 
-@import './components/main.scss'; // main component
+@import './components/main.scss'; // main component - general
+@import './components/lightbox.scss'; // main component - lightbox

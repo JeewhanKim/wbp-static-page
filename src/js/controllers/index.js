@@ -43,9 +43,7 @@ module.exports = _ => {
     /*
     * Step 2. Generate & Render DOM HTML from refined data.
     */
-    require('./_generate.js')(domElements.getMain(), data)
-
-    return
+    require('./_generate.js')(domElements, refinedContents)
   }
 
   // All copy and image data can be fetched at http://homework.warbyparker.com.
