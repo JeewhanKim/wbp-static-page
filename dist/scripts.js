@@ -54,7 +54,6 @@
         var html = "<li>";
         html += "<img src=\"" + imageUrl + "\">";
         html += "</li>";
-        console.log(html);
         return html;
       }).join('');
       dom.getImages().innerHTML = images;
@@ -112,8 +111,13 @@
       getJSON("http://homework.warbyparker.com/", renderFrontPage);
 
       window.addEventListener('scroll', function () {
+        var lightBox = document.getElementsByClassName('wbp-lightbox-inner')[0];
+        var maxHeight = document.getElementsByTagName('body')[0].clientHeight;
         var scrollY = window.scrollY;
-        // console.log(window.scrollY)
+        var scrollPercentage = Math.min(scrollY / (maxHeight - window.innerHeight), 1);
+        var shrinkLevel = 100 - 66.66665 * scrollPercentage;
+
+        lightBox.style.width = shrinkLevel + "%";
       });
     };
   }, { "./_data": 2, "./_dom.js": 3, "./_generate.js": 4 }] }, {}, [1]);

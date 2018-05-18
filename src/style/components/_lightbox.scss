@@ -13,6 +13,7 @@
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 80vw;
+    margin: 0 auto;
     border: 1px solid $border-color;
     // padding: $gutter;
     background-color: $primary-color;
@@ -67,15 +68,15 @@
       }
       #quote {
         padding: $gutter-small;
-        font-size: 16px;
+        font-size: 10px;
       }
       #author {
         padding: $gutter-small;
-        font-size: 20px;
+        font-size: 14px;
       }
       #publication {
         padding: $gutter-small;
-        font-size: 18px;
+        font-size: 12px;
       }
     }
   }

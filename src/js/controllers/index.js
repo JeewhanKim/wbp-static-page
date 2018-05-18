@@ -50,9 +50,13 @@ module.exports = _ => {
   getJSON(`http://homework.warbyparker.com/`, renderFrontPage)
 
   window.addEventListener('scroll', () => {
+    const lightBox = document.getElementsByClassName('wbp-lightbox-inner')[0]
+    const maxHeight = document.getElementsByTagName('body')[0].clientHeight
     const scrollY = window.scrollY
-    // console.log(window.scrollY)
+    const scrollPercentage = Math.min(scrollY/(maxHeight - window.innerHeight), 1)
+    const shrinkLevel = 100 - 66.66665 * scrollPercentage
     
+    lightBox.style.width = `${shrinkLevel}%`
   })
 }
 

@@ -6,7 +6,6 @@ module.exports = (dom, data) => {
     let html = `<li>`
     html += `<img src="${imageUrl}">`
     html += `</li>`
-    console.log(html)
     return html
   }).join('')
   dom.getImages().innerHTML = images
