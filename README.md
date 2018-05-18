@@ -1,5 +1,6 @@
-# Toy Project: Create interactive web app using JSON data
-Creates new web contents from a JSONP file. Budnle your app using `Gulp`, `Browserify`, and `gulp-scss`.
+# Coding Challenge: Create Lightbox using provided JSON data
+This package creates new web contents from a JSON file. Budnle your app using `Gulp`, `Browserify`, and `gulp-scss`.
+Simply open /dist/index.html to see the generated version.
 
 ## Getting Started
 
